@@ -1,0 +1,72 @@
+body {
+    background-color: white;
+}
+
+#shape-form {
+    padding: 3em;
+    margin: 3em;
+    border-radius: 5px;
+    border: solid rgb(111, 43, 7);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 8px #ededed;
+}
+
+.form-input {
+    padding: 5px;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.shape-button {
+    border-radius: 5px;
+    border: solid rgb(111, 43, 7);
+    background-color: " ";
+    color: rgb(111, 43, 7);
+    box-shadow: 10px 10px 8px #ededed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-input {
+    border-radius: 5px;
+    box-shadow: 10px 10px 8px #ededed;
+}
+
+#content-container {
+    padding: 2em;
+    display: flex;
+    float: left;
+}
+
+#shape-container {
+    display: flex;
+    float: left;
+    height: 700px;
+    width: 700px;
+    background-color: rgb(235, 235, 235);
+    padding: 1em;
+    margin: 1em;
+    border-radius: 5px;
+    border: solid rgb(33, 33, 33);
+}
+
+h3 {
+    padding: 5px;
+    margin: 5px;
+}
+
+.input-group {
+    background-color: rgb(111, 43, 7);
+    padding: 2em;
+    margin: 5px;
+    border-radius: 5px;
+    width: 40em;
+}
+
+.input-group-text {
+    width: 130px;
+}
+
+.newShape {
+    display: flex;
+    content: wrap;
+}

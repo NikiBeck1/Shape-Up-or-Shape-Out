@@ -6,17 +6,27 @@ body {
     margin: 10px;
 }
 
-#shape-form {
-    justify-content: center;
+h2 {
+    text-align: center;
 }
 
-h3 {
+h6 {
     text-align: center;
+}
+
+.form-boxes {
+    display: flex;
+    align-items: right;
+    margin: 2em;
+    align-content: right;
+
 }
 
 #shape-form {
     background-color: white;
     display: inline-block;
+    justify-content: right;
+    align-items: right;
     content: wrap;
     padding: 2em;
     margin: 2em;
@@ -53,6 +63,14 @@ h3 {
     content: wrap;
     margin: 3px;
 
+}
+
+.input-group-label {
+    padding: 8px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: rgb(222, 222, 222);
 }
 
 

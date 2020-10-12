@@ -19,28 +19,34 @@
 
 
     <form id="shape-form">
-
-        <h3>Add Your Shape</h3>
+        <h2>Shape Up or Shape Out</h2>
+        <h6>Add Your Shape</h6>
         <hr>
-
+        
+        <div class="form-boxes">
+        <button id="rectangle-button" type="button" class="shape-button">Add Rectangle</button>
         <input type="text" class="form-input" id="rectangle-height" placeholder="height">
         <input type="text" class="form-input" id="rectangle-width" placeholder="width">
-        <button id="rectangle-button" type="button" class="shape-button">Add Rectangle</button>
         <br>
- 
-        <input type="text" class="form-input" id="square-height" placeholder="height">
-        <input type="text" class="form-input" id="square-width" placeholder="width">
+        </div>
+        
+        <div class="form-boxes">
         <button id="square-button" type="button" class="shape-button">Add Square</button>
+        <input type="text" class="form-input" id="square-width" placeholder="side length">
         <br>
+        </div>
 
-        <input type="text" class="form-input" id="circle-height" placeholder="height">
-        <input type="text" class="form-input" id="circle-width" placeholder="width">
+
+        <div class="form-boxes">
         <button id="circle-button" type="button" class="shape-button">Add Circle</button>
+        <input type="text" class="form-input" id="circle-width" placeholder="radius">
         <br>
+        </div>
 
-        <input type="text" class="form-input" id="triangle-height" placeholder="height">
-        <input type="text" class="form-input" id="triangle-width" placeholder="width">
+        <div class="form-boxes">
         <button id="triangle-button" type="button" class="shape-button">Add Triangle</button>
+        <input type="text" class="form-input" id="triangle-width" placeholder="height">
+        </div>
 
     </form>
 
@@ -51,28 +57,28 @@
     
         <div id="shape-info">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="shape-name">Shape Name:</span>
+                <span class="input-group-label" id="shape-name">Shape Name:</span>
             </div>
             <div>
                 <span class="input-group-text" id="shape-name-text"></span>
             </div>
     
             <div class="input-group-prepend">
-                <span class="input-group-text" id="shape-width">Width:</span>
+                <span class="input-group-label" id="shape-width">Width:</span>
             </div>
             <div>
                 <span class="input-group-text" id="shape-width-text"></span>
             </div>
     
             <div class="input-group-prepend">
-                <span class="input-group-text" id="shape-height">Height:</span>
+                <span class="input-group-label" id="shape-height">Height:</span>
             </div>
             <div>
                 <span class="input-group-text" id="shape-height-text"></span>
             </div>
     
             <div class="input-group-prepend">
-                <span class="input-group-text" id="shape-radius">Shape Radius</span>
+                <span class="input-group-label" id="shape-radius">Shape Radius</span>
             </div>
             <div>
                 <span class="input-group-text" id="shape-radius-text"></span>

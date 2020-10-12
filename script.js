@@ -16,8 +16,8 @@ class Rectangle {
         // div element
         this.divRectangle = document.createElement('div');
         this.divRectangle.className = 'newShape';
-        this.divRectangle.style.height = '150px';
-        this.divRectangle.style.width = '300px';
+        this.divRectangle.style.height = '120px';
+        this.divRectangle.style.width = '230px';
         shapeContainer.appendChild(this.divRectangle);
         this.divRectangle.style.backgroundColor = 'green';
     }
@@ -38,6 +38,7 @@ class Rectangle {
 rectangleButton.addEventListener("click", () => {
     let newRec = new Rectangle('Rectangle', `${document.getElementById('rectangle-height').value}`, `${document.getElementById('rectangle-width').value}`);
     newRec.display();
+    shapeContainer.style.borderColor = 'green';
     shapeInfoContainer.style.borderColor = 'green';
 })
 
@@ -45,9 +46,8 @@ rectangleButton.addEventListener("click", () => {
 
 // SQUARE //
 class Square {
-    constructor(shape, height, width) {
+    constructor(shape, width) {
         this.shape = shape;
-        this.height = height;
         this.width = width;
 
         // div element
@@ -55,6 +55,8 @@ class Square {
         this.divSquare.className = 'newShape';
         this.divSquare.style.height = '100px';
         this.divSquare.style.width = '100px';
+        this.divSquare.style.top = `${Math.floor(Math.random() * 650) + 1} px`;
+        this.divSquare.style.left = `${Math.floor(Math.random() * 650) + 1} px`;
         shapeContainer.appendChild(this.divSquare);
         this.divSquare.style.backgroundColor = 'red';
     }
@@ -73,8 +75,9 @@ class Square {
 
 }
 squareButton.addEventListener("click", () => {
-    let newSqu = new Square('Square', `${document.getElementById('square-height').value}`, `${document.getElementById('square-width').value}`);
+    let newSqu = new Square('Square', `${document.getElementById('square-width').value}`);
     newSqu.display();
+    shapeContainer.style.borderColor = 'red';
     shapeInfoContainer.style.borderColor = 'red';
 })
 
@@ -83,10 +86,9 @@ squareButton.addEventListener("click", () => {
 
 // CIRCLE //
 class Circle {
-    constructor(shape, height, width) {
+    constructor(shape, radius) {
         this.shape = shape;
-        this.height = height;
-        this.width = width;
+        this.radius = radius;
 
         // div element
         this.divCircle = document.createElement('div');
@@ -102,18 +104,16 @@ class Circle {
         if (this.shape) {
             document.getElementById('shape-name-text').innerHTML = this.shape;
         }
-        if (this.height) {
-            document.getElementById('shape-height-text').innerHTML = this.height;
-        }
-        if (this.width) {
-            document.getElementById('shape-width-text').innerHTML = this.width;
+        if (this.radius) {
+            document.getElementById('shape-radius-text').innerHTML = this.radius;
         }
     }
 
 }
 circleButton.addEventListener("click", () => {
-    let newCir = new Circle('Circle', `${document.getElementById('circle-height').value}`, `${document.getElementById('circle-width').value}`);
+    let newCir = new Circle('Circle', `${document.getElementById('circle-width').value}`);
     newCir.display();
+    shapeContainer.style.borderColor = 'purple';
     shapeInfoContainer.style.borderColor = 'purple';
 })
 
@@ -123,16 +123,14 @@ circleButton.addEventListener("click", () => {
 
 // TRIANGLE //
 class Triangle {
-    constructor(shape, height, width) {
+    constructor(shape, height) {
         this.shape = shape;
         this.height = height;
-        this.width = width;
 
         // div element
         this.divTriangle = document.createElement('div');
         this.divTriangle.className = 'newShape';
         this.divTriangle.style.backgroundColor = ' ';
-        this.divTriangle.style.position = 'absolute';
         this.divTriangle.style.height = '100px';
         this.divTriangle.style.width = '100px';
         this.divTriangle.style.borderLeft = '60px solid transparent';
@@ -158,7 +156,8 @@ class Triangle {
 
 }
 triangleButton.addEventListener("click", () => {
-    let newTri = new Triangle('Triangle', `${document.getElementById('triangle-height').value}`, `${document.getElementById('triangle-width').value}`);
+    let newTri = new Triangle('Triangle', `${document.getElementById('triangle-width').value}`);
+    shapeContainer.style.borderColor = 'gold';
     shapeInfoContainer.style.borderColor = 'gold';
     newTri.display();
 })

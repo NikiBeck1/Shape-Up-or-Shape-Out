@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    content: wrap;
+    justify-content: center;
+    padding: 2em;
+    margin: 10px;
+}
+
+#shape-form {
+    justify-content: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#shape-form {
+    background-color: white;
+    display: inline-block;
+    content: wrap;
+    padding: 2em;
+    margin: 2em;
+    height: 17em;
+}
+
+#shape-container {
+    display: flex;
+    float: left;
+    content: wrap;
+    height: 600px;
+    width: 600px;
+    border: solid rgb(34, 34, 34);
+    border-radius: 5px;
+    margin: 2em;
+    overflow: hidden;
+}
+
+#shape-info {
+    display: inline-block;
+    content: wrap;
+    align-items: center;
+    border: solid rgb(34, 34, 34);
+    border-radius: 5px;
+    background-color: ' ';
+    padding: 2em;
+    margin: 2em;
+    width: 20em;
+}
+
+.input-group-text {
+    padding: 2em;
+    display: flex;
+    content: wrap;
+    margin: 3px;
+
+}
+
+
+.newShape {
+    display: flex;
+    content: wrap;
+}
+
+#wrapper {
+    display: flex;
+    content: wrap;
+}

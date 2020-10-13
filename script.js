@@ -5,6 +5,11 @@ const squareButton = document.getElementById('square-button');
 const circleButton = document.getElementById('circle-button');
 const triangleButton = document.getElementById('triangle-button');
 const shapeInfoContainer = document.getElementById('shape-info');
+const recHeight = document.getElementById('rectangle-height');
+const recWidth = document.getElementById('rectangle-width');
+const squWidth = document.getElementById('square-width');
+
+
 
 // RECTANGLE //
 class Rectangle {
@@ -12,12 +17,18 @@ class Rectangle {
         this.shape = shape;
         this.height = height;
         this.width = width;
-
+        
         // div element
+        
+        let x = Math.floor(Math.random() * 650) + 1;
+        let y = Math.floor(Math.random() * 650) + 1;
         this.divRectangle = document.createElement('div');
         this.divRectangle.className = 'newShape';
-        this.divRectangle.style.height = '120px';
-        this.divRectangle.style.width = '230px';
+        this.divRectangle.style.height = `${this.height}px`;
+        this.divRectangle.style.width = `${this.width}px`;
+        this.divRectangle.style.position = 'absolute';
+        this.divRectangle.style.left = `${x}px`;
+        this.divRectangle.style.top = `${y}px`;
         shapeContainer.appendChild(this.divRectangle);
         this.divRectangle.style.backgroundColor = 'green';
     }
@@ -36,7 +47,7 @@ class Rectangle {
 
 }
 rectangleButton.addEventListener("click", () => {
-    let newRec = new Rectangle('Rectangle', `${document.getElementById('rectangle-height').value}`, `${document.getElementById('rectangle-width').value}`);
+    let newRec = new Rectangle('Rectangle', recHeight.value, recWidth.value);
     newRec.display();
     shapeContainer.style.borderColor = 'green';
     shapeInfoContainer.style.borderColor = 'green';
@@ -55,8 +66,9 @@ class Square {
         this.divSquare.className = 'newShape';
         this.divSquare.style.height = '100px';
         this.divSquare.style.width = '100px';
-        this.divSquare.style.top = `${Math.floor(Math.random() * 650) + 1} px`;
-        this.divSquare.style.left = `${Math.floor(Math.random() * 650) + 1} px`;
+        this.divSquare.style.position = 'absolute';
+        // this.divSquare.style.top = `${Math.floor(Math.random() * 650) + 1} px`;
+        // this.divSquare.style.left = `${Math.floor(Math.random() * 650) + 1} px`;
         shapeContainer.appendChild(this.divSquare);
         this.divSquare.style.backgroundColor = 'red';
     }
@@ -75,7 +87,7 @@ class Square {
 
 }
 squareButton.addEventListener("click", () => {
-    let newSqu = new Square('Square', `${document.getElementById('square-width').value}`);
+    let newSqu = new Square('Square', squWidth.value);
     newSqu.display();
     shapeContainer.style.borderColor = 'red';
     shapeInfoContainer.style.borderColor = 'red';
